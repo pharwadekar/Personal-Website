@@ -687,7 +687,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: linear-gradient(180deg, rgba(6, 6, 12, 0.75) 0%, rgba(6, 6, 12, 0.65) 100%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -700,18 +700,28 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 64px;
-  font-weight: 700;
+  font-size: 52px;
+  font-weight: 800;
 }
 
-.hero p {
-  margin: 5px 0 0 0;
-  font-size: 36px;
+.hero .hero-subtitle {
+  margin: 10px 0 0 0;
+  font-size: 26px;
   font-weight: 600;
+  color: #ffffff;
 }
 
-.hero p span {
-  letter-spacing: 1px;
+.hero .hero-subtitle span {
+  letter-spacing: 0.5px;
+}
+
+.hero .hero-description {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 18px auto 25px auto;
 }
 
 @media (max-width: 768px) {
@@ -719,8 +729,12 @@ section,
     font-size: 32px;
   }
 
-  .hero p {
-    font-size: 20px;
+  .hero .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero .hero-description {
+    font-size: 1rem;
   }
 }
 
